@@ -1,0 +1,9 @@
+SERVICE   STATUS                   PORTS
+app       Up 4 minutes (healthy)   127.0.0.1:8002->8002/tcp
+redis     Up 4 minutes (healthy)   6379/tcp
+uid=999(app) gid=999(app) groups=999(app)
+Uid:	999	999	999	999
+KR2 | Kudoyarov | container 13a2beb0a0b1 | hits: 13
+scheme: https
+client: 127.0.0.1
+host: notes.devops.local

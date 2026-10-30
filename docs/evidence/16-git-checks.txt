@@ -1,0 +1,18 @@
+$ ls-files .env
+
+$ grep -nI -E REDIS_PASSWORD|requirepass
+.env.example:2:# REDIS_PASSWORD is the only secret. Never export it in the host shell.
+.env.example:4:REDIS_PASSWORD=REPLACE_WITH_RANDOM_SERVER_GENERATED_HEX
+README.md:36:unset REDIS_PASSWORD
+README.md:38:  (umask 077; printf 'REDIS_PASSWORD=%s\n' "$(openssl rand -hex 32)" > .env)
+README.md:47:Не экспортировать REDIS_PASSWORD в оболочке: env_file должен совпадать с
+README.md:48:источником подстановки requirepass. Не печатать docker compose config или полный
+app.py:13:    password=os.getenv("REDIS_PASSWORD"),
+docker-compose.yml:26:    command: ["redis-server", "--appendonly", "yes", "--requirepass", "${REDIS_PASSWORD:?REDIS_PASSWORD is not set}"]
+docker-compose.yml:33:      test: ["CMD-SHELL", "redis-cli -a \"$$REDIS_PASSWORD\" --no-auth-warning ping | grep -q PONG"]
+
+$ log --oneline -4
+25ce168 feat: deploy variant 2 with redis behind nginx
+d054af2 chore: mark application for cache verification
+b518c39 fix: harden image and exclude environment secrets
+3ee6c4b feat: initial application template

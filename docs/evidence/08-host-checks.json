@@ -1,0 +1,52 @@
+[
+  {
+    "check": "HOSTS",
+    "exit": 0,
+    "passed": true
+  },
+  {
+    "check": "HTTP REDIRECT",
+    "exit": 0,
+    "passed": true
+  },
+  {
+    "check": "DEFAULT TRUST",
+    "exit": 60,
+    "passed": true
+  },
+  {
+    "check": "HTTPS COUNTER",
+    "exit": 0,
+    "passed": true
+  },
+  {
+    "check": "PROXY HEADERS",
+    "exit": 0,
+    "passed": true
+  },
+  {
+    "check": "PREVIOUS STATIC SITE",
+    "exit": 0,
+    "passed": true
+  },
+  {
+    "check": "PREVIOUS APP",
+    "exit": 0,
+    "passed": true
+  },
+  {
+    "check": "DIRECT APP PORT",
+    "exit": 28,
+    "passed": true
+  },
+  {
+    "check": "DIRECT REDIS PORT",
+    "exit": 28,
+    "passed": true
+  },
+  {
+    "check": "WRONG CA",
+    "exit": 60,
+    "passed": true
+  }
+]

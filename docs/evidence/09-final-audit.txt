@@ -1,0 +1,36 @@
+Audit: devops-vm.devops.local 2026-10-30T05:47:09+00:00
+[1] SSH
+[OK] Root login prohibited
+[OK] Password authentication disabled
+[OK] Nonstandard SSH port
+[OK] MaxAuthTries
+[2] Firewall
+[OK] UFW active
+[OK] Default deny incoming
+[3] Accounts
+  hehekutov09 uid=1000
+  devops uid=1001
+[4] Web server
+[OK] Nginx active
+[OK] Nginx syntax
+[OK] Certificate validity threshold
+[OK] No world writable content and key mode 600
+[5] Containers
+[OK] Docker active
+[OK] Database healthy
+[OK] App bound to loopback and database unpublished
+[OK] Environment file mode
+[6] Control work 2
+[OK] KR2 Redis healthy
+[OK] KR2 app bound to loopback
+[OK] KR2 environment mode
+[OK] KR2 certificate valid for 30 days
+[OK] KR2 Nginx site enabled
+Passed: 19; failed: 0
+UFW rules unchanged
+-rw------- 1 root   root   1704 Oct 30 05:45 /etc/ssl/private/kr2.key
+-rw------- 1 devops devops   80 Oct 30 05:44 /home/devops/kr2/.env
+Secret value not found in other delivered files
+/etc/nginx/sites-available/devops-site: OK
+
+EXIT STATUS: 0

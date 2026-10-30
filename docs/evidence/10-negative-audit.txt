@@ -1,0 +1,87 @@
+0.0.0.0:8002
+Audit: devops-vm.devops.local 2026-10-30T05:47:26+00:00
+[1] SSH
+[OK] Root login prohibited
+[OK] Password authentication disabled
+[OK] Nonstandard SSH port
+[OK] MaxAuthTries
+[2] Firewall
+[OK] UFW active
+[OK] Default deny incoming
+[3] Accounts
+  hehekutov09 uid=1000
+  devops uid=1001
+[4] Web server
+[OK] Nginx active
+[OK] Nginx syntax
+[OK] Certificate validity threshold
+[OK] No world writable content and key mode 600
+[5] Containers
+[OK] Docker active
+[OK] Database healthy
+[OK] App bound to loopback and database unpublished
+[OK] Environment file mode
+[6] Control work 2
+[OK] KR2 Redis healthy
+[FAIL] KR2 app bound to loopback expected=127.0.0.1:8002 actual=0.0.0.0:8002
+[OK] KR2 environment mode
+[OK] KR2 certificate valid for 30 days
+[OK] KR2 Nginx site enabled
+Passed: 18; failed: 1
+NEGATIVE_AUDIT_EXIT=1
+Audit: devops-vm.devops.local 2026-10-30T05:47:40+00:00
+[1] SSH
+[OK] Root login prohibited
+[OK] Password authentication disabled
+[OK] Nonstandard SSH port
+[OK] MaxAuthTries
+[2] Firewall
+[OK] UFW active
+[OK] Default deny incoming
+[3] Accounts
+  hehekutov09 uid=1000
+  devops uid=1001
+[4] Web server
+[OK] Nginx active
+[OK] Nginx syntax
+[OK] Certificate validity threshold
+[OK] No world writable content and key mode 600
+[5] Containers
+[OK] Docker active
+[OK] Database healthy
+[OK] App bound to loopback and database unpublished
+[OK] Environment file mode
+[6] Control work 2
+[OK] KR2 Redis healthy
+[OK] KR2 app bound to loopback
+[OK] KR2 environment mode
+[OK] KR2 certificate valid for 30 days
+[OK] KR2 Nginx site enabled
+Passed: 19; failed: 0
+RESTORED_AUDIT_EXIT=0
+
+STDERR
+ Container kr2-redis-1 Running 
+ Container kr2-app-1 Recreate 
+ Container kr2-app-1 Recreated 
+ Container kr2-redis-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Starting 
+ Container kr2-app-1 Started 
+ Container kr2-redis-1 Waiting 
+ Container kr2-app-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Healthy 
+ Container kr2-redis-1 Running 
+ Container kr2-app-1 Recreate 
+ Container kr2-app-1 Recreated 
+ Container kr2-redis-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Starting 
+ Container kr2-app-1 Started 
+ Container kr2-redis-1 Waiting 
+ Container kr2-app-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Healthy 
+
+EXIT STATUS: 0

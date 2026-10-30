@@ -1,0 +1,10 @@
+[6] Control work 2
+[OK] KR2 Redis healthy
+[OK] KR2 app bound to loopback
+[OK] KR2 environment mode
+[OK] KR2 certificate valid for 30 days
+[OK] KR2 Nginx site enabled
+Passed: 19; failed: 0
+UFW unchanged
+600 devops /home/devops/kr2/.env
+600 root /etc/ssl/private/kr2.key

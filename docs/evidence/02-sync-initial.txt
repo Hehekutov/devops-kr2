@@ -1,0 +1,30 @@
+sending incremental file list
+created directory kr2
+./
+.dockerignore
+.env.example
+.gitignore
+Dockerfile
+README.md
+app.py
+requirements.txt
+deploy/
+scripts/
+
+sent 358 bytes  received 81 bytes  292.67 bytes/sec
+total size is 1,653  speedup is 3.77 (DRY RUN)
+sending incremental file list
+created directory kr2
+./
+.dockerignore
+.env.example
+.gitignore
+Dockerfile
+README.md
+app.py
+requirements.txt
+deploy/
+scripts/
+
+sent 1,671 bytes  received 197 bytes  1,245.33 bytes/sec
+total size is 1,653  speedup is 0.88
