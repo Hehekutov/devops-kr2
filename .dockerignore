@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.git
+__pycache__
+*.py[cod]
+.venv
+docs
+deploy
+scripts
+README.md

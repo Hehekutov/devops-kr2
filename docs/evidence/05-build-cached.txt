@@ -1,0 +1,56 @@
+
+STDERR
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 308B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 129B done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 890B 0.0s done
+#4 DONE 0.1s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159
+#5 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159
+#5 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159 0.3s done
+#5 DONE 0.3s
+
+#6 [2/6] RUN useradd --system --no-create-home app
+#6 CACHED
+
+#7 [3/6] WORKDIR /app
+#7 CACHED
+
+#8 [4/6] COPY requirements.txt .
+#8 CACHED
+
+#9 [5/6] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [6/6] COPY app.py .
+#10 DONE 0.5s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.6s done
+#11 exporting manifest sha256:99d7cf4ce63a51c4c74343c9c5e7d147d3c92e87e73e931e2c0d7a005438e832
+#11 exporting manifest sha256:99d7cf4ce63a51c4c74343c9c5e7d147d3c92e87e73e931e2c0d7a005438e832 0.1s done
+#11 exporting config sha256:fcd16092e5c76bf41a99760e22f0aad3aedf30875f9406d474adda3aa2e90e76
+#11 exporting config sha256:fcd16092e5c76bf41a99760e22f0aad3aedf30875f9406d474adda3aa2e90e76 0.1s done
+#11 exporting attestation manifest sha256:cfff7f361f6aaf38f5d8777857f639404160ed3b8bec8889b306d7acfe304e5d
+#11 exporting attestation manifest sha256:cfff7f361f6aaf38f5d8777857f639404160ed3b8bec8889b306d7acfe304e5d 0.1s done
+#11 exporting manifest list sha256:f88d795f8687073bbb1aab8db819eafc4a617e040711b62aedb3ba8631c8538e
+#11 exporting manifest list sha256:f88d795f8687073bbb1aab8db819eafc4a617e040711b62aedb3ba8631c8538e 0.1s done
+#11 naming to docker.io/library/kr2-app:1.0 0.1s done
+#11 unpacking to docker.io/library/kr2-app:1.0
+#11 unpacking to docker.io/library/kr2-app:1.0 0.1s done
+#11 DONE 1.4s
+
+EXIT STATUS: 0

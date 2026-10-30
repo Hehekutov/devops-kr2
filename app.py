@@ -1,3 +1,4 @@
+# KR2: Kudoyarov
 import os
 import socket
 

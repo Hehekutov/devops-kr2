@@ -1,0 +1,20 @@
+   Name: 00-before-practices-5-8 (UUID: 16f97eae-c664-4595-ad24-43eed47f8150)
+   Description: Исходное состояние перед выполнением практических работ 5-8
+      Name: 00b-installed-before-first-boot (UUID: bfa99cdd-8157-464b-88de-2dedfb16c8f1)
+      Description: Установленная система перед первым запуском; сохранение перед исправлением зависания Hyper-V/NEM
+         Name: 01-clean-install (UUID: c9fdcdf2-3b52-402a-bdaa-06bd85b8fed8)
+         Description: Ubuntu Server 24.04 LTS обновлена, SSH активен, до настройки devops
+            Name: 00c-recovery-after-live-snapshot (UUID: bd7e0d59-77ea-42c1-a29c-353fafc2d17b)
+            Description: Ключевой вход devops проверен; снимок выключенной машины без состояния памяти
+               Name: 02-keys-configured (UUID: b12d6c00-f179-420b-9f32-34229bcc8ad8)
+               Description: Consistent disk snapshot of the powered-off lab VM
+                  Name: 03-ssh-hardened (UUID: c7d97ff6-549d-4b1a-8ea1-42489e7236f1)
+                  Description: Consistent disk snapshot of the powered-off lab VM
+            Name: 04-nginx-https (UUID: 8901ccc1-bcf7-4284-af3a-d8894d24f04b)
+            Description: Consistent disk snapshot of the powered-off lab VM
+               Name: 05-docker-compose (UUID: 773c7579-32f6-40d3-b51a-228e4040483f)
+               Description: Consistent disk snapshot of the powered-off lab VM
+                  Name: 06-before-kr2 (UUID: ab2873af-ad5e-4a79-94b8-5fcbd05bc8c5)
+                  Description: Before control work 2
+                     Name: 07-kr2 (UUID: 417d8e29-6d92-4ddd-a165-7d08bdf27004) *
+                     Description: Consistent disk snapshot of the powered-off lab VM

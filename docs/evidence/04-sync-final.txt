@@ -1,0 +1,16 @@
+sending incremental file list
+./
+docker-compose.yml
+scripts/
+scripts/audit.sh
+
+sent 448 bytes  received 37 bytes  194.00 bytes/sec
+total size is 6,892  speedup is 14.21 (DRY RUN)
+sending incremental file list
+./
+docker-compose.yml
+scripts/
+scripts/audit.sh
+
+sent 2,367 bytes  received 85 bytes  1,634.67 bytes/sec
+total size is 6,892  speedup is 2.81

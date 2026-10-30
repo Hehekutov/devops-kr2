@@ -1,0 +1,42 @@
+devops-vm
+29.9.2
+Audit: devops-vm.devops.local 2026-10-30T05:41:42+00:00
+[1] SSH
+[OK] Root login prohibited
+[OK] Password authentication disabled
+[OK] Nonstandard SSH port
+[OK] MaxAuthTries
+[2] Firewall
+[OK] UFW active
+[OK] Default deny incoming
+[3] Accounts
+  hehekutov09 uid=1000
+  devops uid=1001
+[4] Web server
+[OK] Nginx active
+[OK] Nginx syntax
+[OK] Certificate validity threshold
+[OK] No world writable content and key mode 600
+[5] Containers
+[OK] Docker active
+[OK] Database healthy
+[OK] App bound to loopback and database unpublished
+[OK] Environment file mode
+Passed: 14; failed: 0
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Fri, 30 Oct 2026 05:41:46 GMT
+Content-Type: text/html
+Content-Length: 346
+Last-Modified: Thu, 22 Oct 2026 21:41:27 GMT
+Connection: keep-alive
+ETag: "6ada8307-15a"
+Accept-Ranges: bytes
+
+Hello from Docker, Kudoyarov! Visits: 11
+
+
+STDERR
+Error response from daemon: No such image: python:3.12-slim
+
+EXIT STATUS: 0

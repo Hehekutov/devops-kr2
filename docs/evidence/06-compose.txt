@@ -1,0 +1,120 @@
+600 devops:devops .env
+#1 [internal] load local bake definitions
+#1 reading from stdin 468B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 308B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 1.6s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 129B 0.0s done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 63B 0.0s done
+#5 DONE 0.1s
+
+#6 [1/6] FROM docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159
+#6 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159
+#6 resolve docker.io/library/python:3.12-slim@sha256:aa943ce411423c7582288f18707ff66eddcbaeb510502d747a72aeb34f30d159 0.3s done
+#6 DONE 0.4s
+
+#7 [5/6] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [2/6] RUN useradd --system --no-create-home app
+#8 CACHED
+
+#9 [3/6] WORKDIR /app
+#9 CACHED
+
+#10 [4/6] COPY requirements.txt .
+#10 CACHED
+
+#11 [6/6] COPY app.py .
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers 0.1s done
+#12 exporting manifest sha256:00731b880f54a333aa713873181f5db5ba33db1245577945888bcead450a9a5f
+#12 exporting manifest sha256:00731b880f54a333aa713873181f5db5ba33db1245577945888bcead450a9a5f 0.0s done
+#12 exporting config sha256:20c122383ea037a8920c51a3b945904ec0504623c54c1db91e3aec373555d709 0.0s done
+#12 exporting attestation manifest sha256:6d4d2f81907a152ffcdda9655fe7cdce8c241b55f250419aae9c7787f03b5b37
+#12 exporting attestation manifest sha256:6d4d2f81907a152ffcdda9655fe7cdce8c241b55f250419aae9c7787f03b5b37 0.3s done
+#12 exporting manifest list sha256:a78d6797bbc403be8262c4129cc0cdd5e5690ba74de25478af81b6acfc6c9fc1
+#12 exporting manifest list sha256:a78d6797bbc403be8262c4129cc0cdd5e5690ba74de25478af81b6acfc6c9fc1 0.2s done
+#12 naming to docker.io/library/kr2-app:1.0
+#12 naming to docker.io/library/kr2-app:1.0 0.1s done
+#12 unpacking to docker.io/library/kr2-app:1.0 0.1s done
+#12 DONE 1.1s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+NAME          IMAGE                                                                     COMMAND                  SERVICE   CREATED              STATUS                        PORTS
+kr2-app-1     sha256:f1e1b4eb246fce4ccfec05c8b59f099fcbcfd8a31d90f305cc77005c24446532   "gunicorn --bind 0.0…"   app       About a minute ago   Up 54 seconds (healthy)       127.0.0.1:8002->8002/tcp
+kr2-redis-1   redis:7-alpine                                                            "docker-entrypoint.s…"   redis     About a minute ago   Up About a minute (healthy)   6379/tcp
+KR2 | Kudoyarov | container 627079440d21 | hits: 4
+KR2 | Kudoyarov | container 627079440d21 | hits: 5
+KR2 | Kudoyarov | container 627079440d21 | hits: 6
+SERVICE  #   UID  PID   PPID  C   STIME  TTY  TIME      CMD
+app      1   999  4864  4840  0   05:45  ?    00:00:00  /usr/local/bin/python3.12 /usr/local/bin/gunicorn --bind 0.0.0.0:8002 --access-logfile - app:app
+app      1   999  4906  4864  1   05:45  ?    00:00:00  /usr/local/bin/python3.12 /usr/local/bin/gunicorn --bind 0.0.0.0:8002 --access-logfile - app:app
+redis    1   999  4756  4731  1   05:45  ?    00:00:00  redis-server *:6379
+uid=999(app) gid=999(app) groups=999(app)
+uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+172.19.0.2      redis
+NOAUTH Authentication required.
+
+127.0.0.1:8002
+:0
+LISTEN 0      4096       127.0.0.1:8002      0.0.0.0:*          
+COUNTER_BEFORE_DOWN=6
+local     kr2_redis_data
+KR2 | Kudoyarov | container 7238e4df32ca | hits: 7
+COUNTER_AFTER_UP=7
+
+STDERR
+ Image kr2-app:1.0 Building 
+ Image kr2-app:1.0 Built 
+ Container kr2-app-1 Running 
+ Container kr2-redis-1 Running 
+ Container kr2-redis-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Waiting 
+ Container kr2-redis-1 Waiting 
+ Container kr2-app-1 Healthy 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Stopping 
+ Container kr2-app-1 Stopped 
+ Container kr2-app-1 Removing 
+ Container kr2-app-1 Removed 
+ Container kr2-redis-1 Stopping 
+ Container kr2-redis-1 Stopped 
+ Container kr2-redis-1 Removing 
+ Container kr2-redis-1 Removed 
+ Network kr2_backend Removing 
+ Network kr2_backend Removed 
+ Network kr2_backend Creating 
+ Network kr2_backend Creating 
+ Network kr2_backend Created 
+ Network kr2_backend Created 
+ Container kr2-redis-1 Creating 
+ Container kr2-redis-1 Created 
+ Container kr2-app-1 Creating 
+ Container kr2-app-1 Created 
+ Container kr2-redis-1 Starting 
+ Container kr2-redis-1 Started 
+ Container kr2-redis-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Starting 
+ Container kr2-app-1 Started 
+ Container kr2-app-1 Waiting 
+ Container kr2-redis-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Healthy 
+
+EXIT STATUS: 0

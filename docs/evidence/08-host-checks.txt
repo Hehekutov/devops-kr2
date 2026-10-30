@@ -1,0 +1,87 @@
+HOSTS
+$ C:\Users\денис\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -c "import socket; print(socket.gethostbyname('notes.devops.local'))"
+192.168.56.101
+
+EXIT=0
+
+HTTP REDIRECT
+$ C:\Windows\System32\curl.exe --noproxy * -sS -I http://notes.devops.local/
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.24.0 (Ubuntu)
+Date: Fri, 30 Oct 2026 05:50:07 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+Location: https://notes.devops.local/
+
+
+EXIT=0
+
+DEFAULT TRUST
+$ C:\Windows\System32\curl.exe --noproxy * -sS -I https://notes.devops.local/
+curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - ������� ������������ �������� ������� ������������, �� ������� �������.
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the webpage mentioned above.
+
+EXIT=60
+
+HTTPS COUNTER
+$ C:\Windows\System32\curl.exe --noproxy * -sS --cacert C:\Users\денис\kr2.crt https://notes.devops.local/
+KR2 | Kudoyarov | container 13a2beb0a0b1 | hits: 8
+
+EXIT=0
+
+PROXY HEADERS
+$ C:\Windows\System32\curl.exe --noproxy * -sS --cacert C:\Users\денис\kr2.crt https://notes.devops.local/whoami
+scheme: https
+client: 192.168.56.1
+host: notes.devops.local
+
+EXIT=0
+
+PREVIOUS STATIC SITE
+$ C:\Windows\System32\curl.exe --noproxy * -sS --cacert C:\Users\денис\devops.crt -I https://devops.local/
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Fri, 30 Oct 2026 05:50:07 GMT
+Content-Type: text/html
+Content-Length: 346
+Last-Modified: Thu, 22 Oct 2026 21:41:27 GMT
+Connection: keep-alive
+ETag: "6ada8307-15a"
+Accept-Ranges: bytes
+
+
+EXIT=0
+
+PREVIOUS APP
+$ C:\Windows\System32\curl.exe --noproxy * -sS --cacert C:\Users\денис\devops.crt https://devops.local/app/
+Hello from Docker, Kudoyarov! Visits: 12
+
+EXIT=0
+
+DIRECT APP PORT
+$ C:\Windows\System32\curl.exe --noproxy * -sS -m 3 http://notes.devops.local:8002/health
+curl: (28) Connection timed out after 3002 milliseconds
+
+EXIT=28
+
+DIRECT REDIS PORT
+$ C:\Windows\System32\curl.exe --noproxy * -sS -m 3 telnet://notes.devops.local:6379
+curl: (28) Connection timed out after 3001 milliseconds
+
+EXIT=28
+
+WRONG CA
+$ C:\Windows\System32\curl.exe --noproxy * -sS --cacert C:\Users\денис\devops.crt https://notes.devops.local/
+curl: (60) schannel: the certificate or certificate chain is based on an untrusted root
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the webpage mentioned above.
+
+EXIT=60

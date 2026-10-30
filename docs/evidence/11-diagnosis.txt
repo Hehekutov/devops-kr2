@@ -1,0 +1,26 @@
+APP_STOPPED_HTTP=502
+NAME          IMAGE            COMMAND                  SERVICE   CREATED         STATUS                    PORTS
+kr2-app-1     kr2-app:1.0      "gunicorn --bind 0.0…"   app       2 minutes ago   Exited (0) 1 second ago   
+kr2-redis-1   redis:7-alpine   "docker-entrypoint.s…"   redis     3 minutes ago   Up 3 minutes (healthy)    6379/tcp
+2026/10/30 05:50:15 [error] 5177#5177: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: notes.devops.local, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8002/", host: "notes.devops.local"
+KR2 | Kudoyarov | container 13a2beb0a0b1 | hits: 9
+Uid:	999	999	999	999
+Uid:	999	999	999	999
+subject=CN = notes.devops.local
+X509v3 Subject Alternative Name: 
+    DNS:notes.devops.local
+
+STDERR
+ Container kr2-app-1 Stopping 
+ Container kr2-app-1 Stopped 
+ Container kr2-redis-1 Running 
+ Container kr2-redis-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Starting 
+ Container kr2-app-1 Started 
+ Container kr2-app-1 Waiting 
+ Container kr2-redis-1 Waiting 
+ Container kr2-redis-1 Healthy 
+ Container kr2-app-1 Healthy 
+
+EXIT STATUS: 0
